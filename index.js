@@ -9,9 +9,9 @@ const options = {
     },
     identity : {
         username: "ValQLive",
-        password: "oauth:qjdl2z3b5ytpuleil8kw87oqrv7q5i"
+        password: "[Redacted]"
     },
-    channels: ['zeradent', 'aridonnie']
+    channels: ['[Name of Twitch Channels]']
 };  
 
 const client = new tmi.Client(options);
@@ -30,10 +30,6 @@ client.on('message', (channel, user, message, self) => {
     if(self) return;
 
     const streamer = channel.slice(1) === user.username;
-
-    if(message == '!owen') {
-        client.say(channel, 'Ring Ring... Ring Ring... Hello, Its your friend Owen How are you so bad that you cant get a kill. bozo suck on dezz nuts.');
-    }
 
     if(message == '!queue') {
 
